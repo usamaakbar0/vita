@@ -76,8 +76,9 @@ function updateActiveNav() {
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-            link.style.color = 'var(--accent-red)';
+        const isCurrentPage = href === currentPage || (currentPage === '' && href === 'index.html');
+        if (isCurrentPage && !link.classList.contains('nav-cta')) {
+            link.classList.add('active');
         }
     });
 }
