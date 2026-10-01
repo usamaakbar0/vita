@@ -8,6 +8,10 @@
     <meta name="description"
         content="Watch real success stories from employers and employees who have benefited from Vita Recruitment services.">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -400,7 +404,7 @@
     <!-- ========================================
          FOOTER
     ========================================= -->
-    <footer class="footer">
+        <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -412,6 +416,7 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
@@ -421,6 +426,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Vita Recruitment Ltd. All Rights Reserved.</p>
 
@@ -529,12 +535,12 @@
 
         if (quoteTrack && prevQuoteBtn && nextQuoteBtn) {
             prevQuoteBtn.addEventListener('click', () => {
-                const cardWidth = quoteTrack.querySelector('.tm-quote-card').offsetWidth + 40;
+                const cardWidth = quoteTrack.querySelector('.tm-quote-card').offsetWidth + (parseFloat(getComputedStyle(quoteTrack).columnGap) || 0);
                 quoteTrack.scrollBy({ left: -cardWidth, behavior: 'smooth' });
             });
 
             nextQuoteBtn.addEventListener('click', () => {
-                const cardWidth = quoteTrack.querySelector('.tm-quote-card').offsetWidth + 40;
+                const cardWidth = quoteTrack.querySelector('.tm-quote-card').offsetWidth + (parseFloat(getComputedStyle(quoteTrack).columnGap) || 0);
                 quoteTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
             });
         }

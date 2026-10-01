@@ -7,6 +7,10 @@
     <title>Vita Recruitment | UK Talent Specialist</title>
     <meta name="description"
         content="Bridging the gap between UK businesses and top-tier talent. Expert recruitment solutions for Healthcare, Construction, and Office & Admin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 
@@ -52,27 +56,89 @@
         </div>
     </section>
 
+    <!-- Services: 5-Step Recruitment Process -->
+    <section class="hp-services">
+        <div class="container">
+            <div class="hp-services-head">
+                <h2>Our 5-Step Recruitment Process</h2>
+                <a href="#contact" class="hp-services-cta">Talk to our team</a>
+            </div>
+            <div class="hp-services-grid">
+                <article class="hp-service-card">
+                    <span class="hp-service-num">01</span>
+                    <h3>Initial Consultation</h3>
+                    <p>We consult with you to understand your specific needs, company culture, and job requirements. This foundation ensures we find the perfect cultural fit.</p>
+                    <a href="#contact" class="hp-service-link">Enquire &rarr;</a>
+                </article>
+                <article class="hp-service-card">
+                    <span class="hp-service-num">02</span>
+                    <h3>Candidate Screening</h3>
+                    <p>Our expert team sources and screens qualified candidates from our extensive network. We verify credentials, experience, and cultural alignment.</p>
+                    <a href="#contact" class="hp-service-link">Enquire &rarr;</a>
+                </article>
+                <article class="hp-service-card">
+                    <span class="hp-service-num">03</span>
+                    <h3>Interviews &amp; Assessment</h3>
+                    <p>Selected candidates participate in structured interviews and practical assessments. We conduct thorough background and reference checks.</p>
+                    <a href="#contact" class="hp-service-link">Enquire &rarr;</a>
+                </article>
+                <article class="hp-service-card">
+                    <span class="hp-service-num">04</span>
+                    <h3>Job Offer &amp; Onboarding</h3>
+                    <p>We facilitate offer and handle all paperwork, visa requirements, and contract terms. We ensure both parties are satisfied with the arrangement.</p>
+                    <a href="#contact" class="hp-service-link">Enquire &rarr;</a>
+                </article>
+                <article class="hp-service-card">
+                    <span class="hp-service-num">05</span>
+                    <h3>Support</h3>
+                    <p>We provide comprehensive support during the transition period, including cultural orientation, accommodation assistance, and ongoing mentorship.</p>
+                    <a href="#contact" class="hp-service-link">Enquire &rarr;</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacts Pre-Footer -->
-    <section class="hp-contact">
+    <section class="hp-contact" id="contact">
         <div class="container hp-contact-container">
             <div class="hp-contact-details">
                 <h2>Contact Us</h2>
-                <p>“Reach out to us for any enquiries regarding recruitment or job opportunities, our team will be ready to assist you.“</p>
+                <p>“Reach out to us for any enquiries regarding recruitment or job opportunities, our team will be ready to assist you.”</p>
+                <a href="https://wa.me/447552883559" class="hp-wa-btn" target="_blank" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 21l1.65-4.8A9 9 0 1 1 8.2 19.6L3 21z" />
+                        <path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.2-1.9-1-.9.7c-1-.4-1.9-1.3-2.3-2.3l.7-.9-1-1.9L9 9.5z" />
+                    </svg>
+                    Message us on WhatsApp
+                </a>
             </div>
             <div class="hp-contact-form-wrapper">
                 <form class="hp-quick-form" id="hpQuickForm">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" rows="3" required></textarea>
-                    <button type="submit" class="btn btn-primary hp-btn-primary" style="width: 100%;">Send
-                        Message</button>
+                    <div class="hp-form-row">
+                        <div class="hp-field">
+                            <label for="hpName">Name</label>
+                            <input type="text" id="hpName" name="name" placeholder="Jane Okafor" required>
+                        </div>
+                        <div class="hp-field">
+                            <label for="hpEmail">Email</label>
+                            <input type="email" id="hpEmail" name="email" placeholder="jane@company.com" required>
+                        </div>
+                    </div>
+                    <div class="hp-field">
+                        <label for="hpMessage">Message</label>
+                        <textarea id="hpMessage" name="message" rows="6"
+                            placeholder="Tell us what role or support you are looking for." required></textarea>
+                    </div>
+                    <button type="submit" class="hp-submit">Send Message</button>
+                    <p class="hp-form-note">We reply to every enquiry within [X] working days.</p>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+        <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">

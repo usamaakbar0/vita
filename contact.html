@@ -8,18 +8,27 @@
     <meta name="description"
         content="Get in touch with Vita Recruitment. Contact us via WhatsApp, email, or our contact form for inquiries and support.">
     <link rel="stylesheet" href="assets/styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    <link rel="stylesheet" href="assets/styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
-<body>
+<body class="ct-page">
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html"><img src="assets/images/logo.png" alt="Vita Recruitment Logo"></a>
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Vita Recruitment Logo">
+                </a>
             </div>
-            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-menu" id="navMenu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
@@ -31,43 +40,26 @@
     </nav>
 
     <!-- HERO -->
-    <section class="ct-hero">
-        <div class="ct-hero__bg"></div>
-        <div class="ct-particles" id="ctParticles"></div>
-        <div class="container ct-hero__inner">
-            <div class="container">
-                <h2 class="tm-cta__title">Be Our Next Success Story</h2>
-                <p class="tm-cta__desc">Join hundreds of employers and candidates who trust Vita</p>
-                <div class="tm-cta__buttons">
-                    <a href="contact.html" class="tm-btn tm-btn--primary">Contact Vita</a>
-                    <a href="https://wa.me/447552883559" class="tm-btn tm-btn--whatsapp" target="_blank"
-                        rel="noopener noreferrer">WhatsApp Now</a>
-                </div>
+    <section class="ct-hero2">
+        <div class="container">
+            <span class="ct-eyebrow">Contact</span>
+            <h1 class="ct-hero2__title">Be Our Next Success Story</h1>
+            <p class="ct-hero2__desc">Join hundreds of employers and candidates who trust Vita</p>
+            <div class="ct-hero2__buttons">
+                <a href="#get-in-touch" class="ct-btn ct-btn--primary">Contact Vita</a>
+                <a href="https://wa.me/447552883559" class="ct-btn ct-btn--outline" target="_blank"
+                    rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4l-4.5 1.1z" />
+                        <path
+                            d="M9 8.6c.2-.5.5-.6.8-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.7l-.5.6c.6 1.2 1.6 2.2 2.8 2.8l.6-.5c.2-.2.5-.2.7-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.6.8-.6.3-1.6.4-2.9-.2a9 9 0 0 1-4.4-4.4c-.6-1.3-.5-2.3-.1-2.8z" />
+                    </svg>
+                    WhatsApp Now
+                </a>
             </div>
-        </div>
-        <div class="ct-hero__scroll">
-            <span></span>
         </div>
     </section>
-
-    <!-- TRUST STRIP -->
-    <div class="ct-trust">
-        <div class="container ct-trust__inner">
-            <div class="ct-trust__item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-                <span>UK Registered & Regulated</span>
-            </div>
-            <div class="ct-trust__item">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                </svg>
-                <span>Replies Within 24 Hours</span>
-            </div>
-        </div>
-    </div>
 
     <!-- PLATFORM CARDS
     <section class="ct-platforms">
@@ -146,7 +138,7 @@
         <div class="container">
             <div class="ct-main__grid">
                 <!-- LEFT: FORM -->
-                <div class="ct-form-wrap">
+                <div class="ct-form-wrap" id="get-in-touch">
                     <div class="ct-form-wrap__head">
                         <span class="ct-section-label">Get In Touch</span>
                         <h2>Send Us a Message</h2>
@@ -156,50 +148,21 @@
                         <div class="ct-form__row">
                             <div class="ct-form__group">
                                 <label for="name">Full Name</label>
-                                <div class="ct-form__input-wrap">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                                        <circle cx="12" cy="7" r="4" />
-                                    </svg>
-                                    <input type="text" id="name" name="name" required placeholder="John Doe">
-                                </div>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
                             </div>
                             <div class="ct-form__group">
                                 <label for="email">Email Address</label>
-                                <div class="ct-form__input-wrap">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path
-                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                        <polyline points="22,6 12,13 2,6" />
-                                    </svg>
-                                    <input type="email" id="email" name="email" required placeholder="john@example.com">
-                                </div>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
                             </div>
                         </div>
                         <div class="ct-form__row">
                             <div class="ct-form__group">
                                 <label for="phone">Phone Number</label>
-                                <div class="ct-form__input-wrap">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path
-                                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.13 12.6 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-                                    </svg>
-                                    <input type="tel" id="phone" name="phone" required placeholder="+44 123 456 7890">
-                                </div>
+                                <input type="tel" id="phone" name="phone" required placeholder="+44 123 456 7890">
                             </div>
                             <div class="ct-form__group">
                                 <label for="company">Company</label>
-                                <div class="ct-form__input-wrap">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <rect x="2" y="7" width="20" height="14" rx="2" />
-                                        <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
-                                    </svg>
-                                    <input type="text" id="company" name="company" placeholder="Your Company Name">
-                                </div>
+                                <input type="text" id="company" name="company" placeholder="Your Company Name">
                             </div>
                         </div>
                         <div class="ct-form__group">
@@ -231,7 +194,7 @@
                     </form>
                 </div>
 
-                <!-- RIGHT: OFFICES
+                <!-- RIGHT: OFFICES (hidden)
                 <div class="ct-offices">
                     <div class="ct-office-card">
                         <div class="ct-office-card__header">
@@ -267,7 +230,7 @@
                         </ul>
                     </div>
 
-                    <!-- <div class="ct-office-card">
+                    <div class="ct-office-card">
                         <div class="ct-office-card__header">
                             <div class="ct-office-card__flag"><img src="assets/images/France.png" alt="France"
                                     style="width:34px;height:auto;"></div>
@@ -294,7 +257,8 @@
                                     <polyline points="22,6 12,13 2,6" />
                                 </svg>nichole@vitarecruitment.ltd</li>
                         </ul>
-                    </div> -->
+                    </div>
+                </div> -->
 
 
             </div>
@@ -314,6 +278,7 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
@@ -323,6 +288,7 @@
                     </ul>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Vita Recruitment Ltd. All Rights Reserved.</p>
 
@@ -339,25 +305,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Particle effect
-        (function () {
-            const container = document.getElementById('ctParticles');
-            if (!container) return;
-            for (let i = 0; i < 18; i++) {
-                const p = document.createElement('div');
-                p.className = 'ct-particle';
-                const size = Math.random() * 5 + 2;
-                p.style.cssText = `
-                    width:${size}px;height:${size}px;
-                    left:${Math.random() * 100}%;
-                    animation-duration:${Math.random() * 12 + 8}s;
-                    animation-delay:${Math.random() * 10}s;
-                    opacity:${Math.random() * .3 + .05};
-                `;
-                container.appendChild(p);
-            }
-        })();
-
         // Form submit
         document.getElementById('contactForm')?.addEventListener('submit', function (e) {
             e.preventDefault();

@@ -1,0 +1,319 @@
+/* ============================================
+   CONTACT PAGE — REDESIGN
+   Scoped to body.ct-page so shared styles on other pages are untouched.
+   ============================================ */
+
+.ct-page {
+    --ct-navy: #11224E;
+    --ct-navy-deep: #0C1838;
+    --ct-red: #C62D25;
+    --ct-red-dark: #A8231C;
+    --ct-bg: #F3F4F6;
+    --ct-border: #CDD1D9;
+    --ct-text: #4B5563;
+    --ct-heading-font: 'Space Grotesk', 'Inter', sans-serif;
+    --ct-body-font: 'Inter', 'Segoe UI', sans-serif;
+
+    font-family: var(--ct-body-font);
+    background: var(--ct-bg);
+}
+
+/* ---- HERO ---- */
+.ct-hero2 {
+    background: var(--ct-navy);
+    color: #fff;
+    text-align: center;
+    padding: 110px 0 104px;
+}
+
+.ct-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .75);
+    margin-bottom: 22px;
+}
+
+.ct-eyebrow::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    background: var(--ct-red);
+}
+
+.ct-hero2__title {
+    font-family: var(--ct-heading-font);
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+}
+
+.ct-hero2__desc {
+    font-size: clamp(16px, 1.6vw, 19px);
+    color: rgba(255, 255, 255, .82);
+    margin-bottom: 38px;
+}
+
+.ct-hero2__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.ct-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 32px;
+    font-family: var(--ct-body-font);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.ct-btn--primary {
+    background: var(--ct-red);
+    color: #fff;
+}
+
+.ct-btn--primary:hover {
+    background: var(--ct-red-dark);
+}
+
+.ct-btn--outline {
+    color: #fff;
+    border-color: rgba(255, 255, 255, .85);
+}
+
+.ct-btn--outline:hover {
+    background: #fff;
+    color: var(--ct-navy);
+}
+
+/* ---- FORM SECTION ---- */
+.ct-page .ct-main {
+    background: var(--ct-bg);
+    padding: 92px 0;
+}
+
+.ct-page .ct-main__grid {
+    display: block;
+}
+
+.ct-page .ct-form-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border: 0;
+    border-top: 3px solid var(--ct-navy);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 50px 48px 48px;
+    scroll-margin-top: 100px;
+}
+
+.ct-page .ct-form-wrap__head {
+    margin-bottom: 38px;
+}
+
+.ct-page .ct-section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--ct-red);
+    margin-bottom: 12px;
+}
+
+.ct-page .ct-form-wrap__head h2 {
+    font-family: var(--ct-heading-font);
+    font-size: clamp(28px, 3.4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -.5px;
+    line-height: 1.15;
+    color: var(--ct-navy);
+    margin-bottom: 12px;
+}
+
+.ct-page .ct-form-wrap__head p {
+    font-size: 15px;
+    color: var(--ct-text);
+}
+
+.ct-page .ct-form__row {
+    gap: 22px;
+}
+
+.ct-page .ct-form__group {
+    margin-bottom: 28px;
+}
+
+.ct-page .ct-form__group label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: var(--ct-navy);
+    margin-bottom: 10px;
+}
+
+.ct-page .ct-form__group input,
+.ct-page .ct-form__group textarea {
+    font-family: var(--ct-body-font);
+    font-size: 15px;
+    color: var(--ct-navy);
+    background: #fff;
+    border: 1px solid var(--ct-border);
+    border-radius: 0;
+    padding: 14px 16px;
+}
+
+.ct-page .ct-form__group input {
+    height: 51px;
+}
+
+.ct-page .ct-form__group input::placeholder,
+.ct-page .ct-form__group textarea::placeholder {
+    color: #6B7280;
+}
+
+.ct-page .ct-form__group textarea {
+    min-height: 178px;
+}
+
+.ct-page .ct-form__group input:focus,
+.ct-page .ct-form__group textarea:focus {
+    border-color: var(--ct-navy);
+    box-shadow: 0 0 0 3px rgba(17, 34, 78, .1);
+}
+
+.ct-page .ct-form__check {
+    gap: 14px;
+    margin: 4px 0 28px 4px;
+}
+
+.ct-page .ct-form__check input {
+    appearance: none;
+    -webkit-appearance: none;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #6B7280;
+    border-radius: 2px;
+    background: #fff;
+    display: grid;
+    place-content: center;
+}
+
+.ct-page .ct-form__check input::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--ct-red);
+    transform: scale(0);
+    transition: transform .15s ease;
+}
+
+.ct-page .ct-form__check input:checked {
+    border-color: var(--ct-red);
+}
+
+.ct-page .ct-form__check input:checked::before {
+    transform: scale(1);
+}
+
+.ct-page .ct-form__check input:focus-visible {
+    outline: 2px solid var(--ct-navy);
+    outline-offset: 2px;
+}
+
+.ct-page .ct-form__check label {
+    font-size: 14px;
+    color: var(--ct-text);
+}
+
+.ct-page .ct-form__check label a {
+    color: var(--ct-navy);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ct-page .ct-form__btn {
+    height: 58px;
+    padding: 0 24px;
+    border-radius: 0;
+    background: var(--ct-red);
+    font-family: var(--ct-body-font);
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color .2s ease;
+}
+
+.ct-page .ct-form__btn::before {
+    display: none;
+}
+
+.ct-page .ct-form__btn:hover {
+    background: var(--ct-red-dark);
+    transform: none;
+    box-shadow: none;
+}
+
+.ct-page .ct-form__btn:disabled {
+    opacity: .75;
+    cursor: wait;
+}
+
+.ct-page .ct-form__success {
+    border-radius: 0;
+}
+
+/* ---- FOOTER ---- */
+.ct-page .whatsapp-button {
+    background: #1A9A4B;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .ct-hero2 {
+        padding: 72px 0 68px;
+    }
+
+    .ct-page .ct-main {
+        padding: 48px 0 56px;
+    }
+
+    .ct-page .ct-form-wrap {
+        padding: 36px 24px;
+    }
+
+    .ct-page .ct-form__row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .ct-page .ct-form__group {
+        margin-bottom: 22px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .ct-btn {
+        width: 100%;
+    }
+
+    .ct-page .ct-form-wrap {
+        padding: 28px 18px;
+    }
+}
