@@ -1148,7 +1148,7 @@ body {
     border: none;
     border-top: 3px solid #11224E;
     border-radius: 0;
-    padding: 46px 40px 42px;
+    padding: 30px 32px 26px;
     position: relative;
     scroll-snap-align: start;
     transition: box-shadow 0.3s ease;
@@ -1160,9 +1160,9 @@ body {
 
 .tm-quote-card__stars {
     color: #B7791F;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     letter-spacing: 6px;
 }
 
@@ -1172,20 +1172,20 @@ body {
 
 .tm-quote-card__text {
     font-family: 'Hanken Grotesk', 'Inter', var(--font-family);
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 400;
     font-style: normal;
     color: #3F4656;
-    line-height: 1.95;
-    margin-bottom: 28px;
+    line-height: 1.6;
+    margin-bottom: 18px;
     flex-grow: 1;
 }
 
 .tm-quote-card__author {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding-top: 26px;
+    gap: 14px;
+    padding-top: 16px;
     border-top: 1px solid #E5E7EB;
 }
 
@@ -4403,12 +4403,12 @@ img {
 
     .tm-quote-card {
         flex: 0 0 100%;
-        padding: 36px 28px 32px;
+        padding: 24px 22px 20px;
     }
 
     .tm-quote-card__text {
-        font-size: 17px;
-        line-height: 1.8;
+        font-size: 16px;
+        line-height: 1.55;
     }
 
     .tm-section-title {
@@ -4621,6 +4621,6 @@ img {
     }
 
     .tm-quote-card {
-        padding: 28px 22px 26px;
+        padding: 20px 18px 16px;
     }
 }
