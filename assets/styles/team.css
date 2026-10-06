@@ -26,15 +26,6 @@
     animation: none;
 }
 
-.ab-page .about-header h1::after {
-    content: '';
-    display: block;
-    width: 56px;
-    height: 3px;
-    background: var(--ct-red);
-    margin-top: 28px;
-}
-
 /* ---- FOUNDERS ---- */
 .team-section {
     padding: 88px 0 96px;
