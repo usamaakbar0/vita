@@ -201,6 +201,21 @@
     margin: 4px 0 28px 4px;
 }
 
+/* Honeypot spam trap for the contact form — present in the DOM for bots,
+   invisible and unreachable for real visitors (not display:none, which some
+   bots deliberately skip when deciding which fields to fill in). */
+.ct-form__honeypot {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 .ct-page .ct-form__check input {
     appearance: none;
     -webkit-appearance: none;

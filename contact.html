@@ -42,7 +42,7 @@
     <!-- HERO -->
     <section class="ct-hero2">
         <div class="container">
-            <span class="ct-eyebrow">Contact</span>
+            <!-- <span class="ct-eyebrow">Contact</span> -->
             <h1 class="ct-hero2__title">Be Our Next Success Story</h1>
             <p class="ct-hero2__desc">Join hundreds of employers and candidates who trust Vita</p>
             <div class="ct-hero2__buttons">
@@ -145,6 +145,15 @@
                         <p>Fill in the details below and we'll get back to you within 24 hours.</p>
                     </div>
                     <form class="ct-form" id="contactForm">
+                        <!-- Web3Forms (free, no backend needed): sends every submission straight to
+                             rana.usama.akbar@gmail.com. Get your own free Access Key at
+                             https://web3forms.com (just enter that email — no signup/password, no card)
+                             and paste it below in place of YOUR_WEB3FORMS_ACCESS_KEY. -->
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                        <input type="hidden" name="subject" value="New enquiry from Vita Recruitment website">
+                        <input type="hidden" name="from_name" value="Vita Recruitment Website">
+                        <!-- Honeypot spam trap: must stay empty and hidden, bots tend to fill every field -->
+                        <input type="checkbox" name="botcheck" class="ct-form__honeypot" tabindex="-1" autocomplete="off">
                         <div class="ct-form__row">
                             <div class="ct-form__group">
                                 <label for="name">Full Name</label>
@@ -193,6 +202,94 @@
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="testimonials.html">Success Stories</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Work Placement</a></li>
+                        <li><a href="services.html">Admin and Support</a></li>
+                        <li><a href="services.html">Visa Assistance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vita Recruitment Ltd. All Rights Reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/447552883559" class="whatsapp-button" target="_blank" rel="noopener noreferrer"
+        title="Chat with us on WhatsApp">
+        <img src="assets/images/whatsapp.webp" alt="WhatsApp">
+    </a>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Form submit — sends the message via Web3Forms (free third-party email relay,
+        // https://web3forms.com) straight to the inbox tied to the Access Key above.
+        document.getElementById('contactForm')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = this;
+            const btn = form.querySelector('.ct-form__btn');
+            const btnLabel = btn.querySelector('span');
+            const success = document.getElementById('formSuccess');
+            const originalLabel = btnLabel.textContent;
+
+            // Honeypot: if this hidden field got filled in, silently drop the submission
+            if (form.botcheck && form.botcheck.checked) {
+                form.reset();
+                return;
+            }
+
+            btn.disabled = true;
+            btnLabel.textContent = 'Sending...';
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+            })
+                .then(res => res.json())
+                .then(result => {
+                    if (result.success) {
+                        btn.style.display = 'none';
+                        success.classList.add('visible');
+                        form.reset();
+                    } else {
+                        throw new Error(result.message || 'Submission failed');
+                    }
+                })
+                .catch(() => {
+                    btn.disabled = false;
+                    btnLabel.textContent = originalLabel;
+                    alert("Sorry, your message couldn't be sent right now. Please try again or reach us on WhatsApp.");
+                });
+        });
+    </script>
+</body>
+
+</html>
 
                 <!-- RIGHT: OFFICES (hidden)
                 <div class="ct-offices">
@@ -259,66 +356,3 @@
                         </ul>
                     </div>
                 </div> -->
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="testimonials.html">Success Stories</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Work Placement</a></li>
-                        <li><a href="services.html">Admin and Support</a></li>
-                        <li><a href="services.html">Visa Assistance</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Vita Recruitment Ltd. All Rights Reserved.</p>
-
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/447552883559" class="whatsapp-button" target="_blank" rel="noopener noreferrer"
-        title="Chat with us on WhatsApp">
-        <img src="assets/images/whatsapp.webp" alt="WhatsApp">
-    </a>
-
-
-    <script src="script.js"></script>
-    <script>
-        // Form submit
-        document.getElementById('contactForm')?.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const btn = this.querySelector('.ct-form__btn');
-            const success = document.getElementById('formSuccess');
-            btn.disabled = true;
-            btn.querySelector('span').textContent = 'Sending...';
-            setTimeout(() => {
-                btn.style.display = 'none';
-                success.classList.add('visible');
-                this.reset();
-            }, 1400);
-        });
-    </script>
-</body>
-
-</html>
